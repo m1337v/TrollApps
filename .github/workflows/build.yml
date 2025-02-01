@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     branches:
-      - main    # Adjust if your default branch is different
+      - main
       - master
 
 jobs:
@@ -11,42 +11,45 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      # 1. Checkout the repository
+  
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # 2. Make the build.command executable (located in the TrollApps directory)
+  
       - name: Make build.command executable
         run: chmod +x build.command
         working-directory: ./TrollApps
 
-      # 3. Run the build.command script to build the app
+      - name: Install ldid
+        run: brew install ldid
+
+  
       - name: Run build.command
         run: ./build.command
         working-directory: ./TrollApps
 
-      # 4. Upload the generated artifact as a workflow artifact (for later use or debugging)
+  
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: TrollApps.tipa
-          # This path is relative to the repository root:
+      
           path: TrollApps/build/TrollApps.tipa
 
-      # 5. Create a new GitHub release
+  
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # You can customize these values as needed.
+      
           tag_name: "release"
           release_name: "Auto Build Release"
           draft: false
           prerelease: true
 
-      # 6. Upload the build artifact to the release
+  
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
         env:
@@ -57,4 +60,4 @@ jobs:
           asset_name: TrollApps.tipa
           asset_content_type: application/octet-stream
 
-          
+
