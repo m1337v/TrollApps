@@ -11,7 +11,7 @@
 			<string>org.resonance.store</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>trollapps</string>
+				<string>ta</string>
 			</array>
 		</dict>
 	</array>

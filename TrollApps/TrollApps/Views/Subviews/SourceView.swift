@@ -24,7 +24,7 @@ struct SourceView: View {
         }
         .listStyle(PlainListStyle())
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .navigationBarTrailing) {
                 HStack {
                     Text("")
 //                    Button(action: {

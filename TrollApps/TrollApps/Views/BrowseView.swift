@@ -40,7 +40,7 @@ struct BrowseView: View {
             .navigationTitle("BROWSE")
             .navigationViewStyle(.stack)
             .toolbar {
-                ToolbarItemGroup(placement: .topBarLeading) {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
                     Button(action: {
                         showFullMode.toggle()
                     }) {

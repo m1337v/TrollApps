@@ -47,7 +47,7 @@ struct SourcesView: View {
                             }
                         }
                     }
-                    ToolbarItem(placement: .topBarLeading) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         if repoMultiSelection.count == 0 {
                             if badRepos.count > 0 {
                                 Button(action: {
@@ -60,7 +60,7 @@ struct SourcesView: View {
                         }
                     }
                     
-                    ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         if repoMultiSelection.count > 0 {
                             Button(action: {
                                 let selectedUrls = repos.filter { repo in repoMultiSelection.contains(repo.id) }.map { $0.url }
@@ -77,7 +77,7 @@ struct SourcesView: View {
                         }
                     }
                     
-                    ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         if repoMultiSelection.count > 0 {
                             Button(action: {
                                 withAnimation {
@@ -89,7 +89,7 @@ struct SourcesView: View {
                             }
                         }
                     }
-                    ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         if repoMultiSelection.count == 0 {
                             NavigationLink(destination: AddSourceView(onDismiss: {
                                 updateUI()
@@ -109,7 +109,7 @@ struct SourcesView: View {
                 .listStyle(PlainListStyle())
                 .navigationTitle("BROKEN_REPOS")
                 .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         if(editMode == .inactive) {
                             Button("Edit") {
                                 editMode = .active
@@ -120,7 +120,7 @@ struct SourcesView: View {
                             }
                         }
                     }
-                    ToolbarItem(placement: .topBarLeading) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         if failedMultiSelection.count == 0 {
                             Button(action: {
                                 showFailed.toggle()
@@ -130,7 +130,7 @@ struct SourcesView: View {
                         }
                     }
                     
-                    ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         if failedMultiSelection.count > 0 {
                             Button(action: {
                                 let selectedUrls = repos.filter { repo in failedMultiSelection.contains(repo.id) }.map { $0.url }
@@ -147,7 +147,7 @@ struct SourcesView: View {
                         }
                     }
                     
-                    ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         if failedMultiSelection.count > 0 {
                             Button(action: {
                                 removeBadRepos(badRepoIds: failedMultiSelection)
@@ -171,7 +171,7 @@ struct SourcesView: View {
             }
         }
         .onOpenURL { url in
-            if url.absoluteString.hasPrefix("trollapps://add?url=") {
+            if url.absoluteString.hasPrefix("ta://add?url=") {
                 if let repoURL = url.queryParameters?["url"] {
                     if repoURL != "" {
                         

@@ -12,20 +12,16 @@ struct TrollAppsApp: App {
     @StateObject private var repoManager = RepositoryManager()
     @StateObject private var alertManager = AlertManager()
     @StateObject private var queueManager = QueueManager()
-    
     @StateObject private var userSettings = UserSettings()
     
     var body: some Scene {
         WindowGroup {
-            ChangelogManagerView(
-                content:
-                    ZStack {
-                        NavView()
-                            .zIndex(2)
-                        AlertManagerView()
-                            .zIndex(3)
-                    }
-            )
+            ZStack {
+                NavView()
+                    .zIndex(2)
+                AlertManagerView()
+                    .zIndex(3)
+            }
             .environment(\.locale, .init(identifier: userSettings.lang))
             .environmentObject(repoManager)
             .environmentObject(alertManager)
@@ -40,6 +36,7 @@ struct TrollAppsApp: App {
         }
     }
 }
+
 
 // Code for testing out getting downloaded ipa details
 //import SwiftUI

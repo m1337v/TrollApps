@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CE212AB2D4E4A01006F7B31 /* FeaturedAppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE212AA2D4E4A01006F7B31 /* FeaturedAppRow.swift */; };
 		6D29D3D82923C78300AF0602 /* SourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29D3D72923C78300AF0602 /* SourcesView.swift */; };
 		6D71F9C2292BF8220016D853 /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71F9C1292BF8220016D853 /* FeaturedView.swift */; };
 		6D8817CA291ECB9B007139C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D8817C9291ECB9B007139C6 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4CE212AA2D4E4A01006F7B31 /* FeaturedAppRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAppRow.swift; sourceTree = "<group>"; };
 		6D29D3D72923C78300AF0602 /* SourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesView.swift; sourceTree = "<group>"; };
 		6D71F9C1292BF8220016D853 /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
 		6D78B4882921088000EFB2FD /* TrollApps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrollApps-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				742E29A32B2C483E00B2690D /* Supplements */,
 				742E299C2B2C44D000B2690D /* Subviews */,
 				742E29962B2C43DC00B2690D /* NavView.swift */,
+				4CE212AA2D4E4A01006F7B31 /* FeaturedAppRow.swift */,
 				6D71F9C1292BF8220016D853 /* FeaturedView.swift */,
 				742E29912B2C3F4A00B2690D /* NewsView.swift */,
 				6D29D3D72923C78300AF0602 /* SourcesView.swift */,
@@ -379,6 +382,7 @@
 				742E29C32B2E55DB00B2690D /* BadRepoCell.swift in Sources */,
 				740916B52B293A570004A33A /* AlertManager.swift in Sources */,
 				742E29972B2C43DC00B2690D /* NavView.swift in Sources */,
+				4CE212AB2D4E4A01006F7B31 /* FeaturedAppRow.swift in Sources */,
 				74C348682B1953D60043AA8C /* AppDetailsView.swift in Sources */,
 				742E29B02B2C4A4000B2690D /* Apps.swift in Sources */,
 				74C3486A2B19AF270043AA8C /* SourceView.swift in Sources */,
@@ -563,7 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrollApps/Preview Content\"";
-				DEVELOPMENT_TEAM = AKUATGSFRT;
+				DEVELOPMENT_TEAM = 33ZDA25479;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrollApps/Info.plist;
@@ -585,7 +589,7 @@
 					"$(PROJECT_DIR)/TrollApps",
 				);
 				MARKETING_VERSION = 2.3;
-				PRODUCT_BUNDLE_IDENTIFIER = org.resonance.store;
+				PRODUCT_BUNDLE_IDENTIFIER = com.m1337.store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -612,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrollApps/Preview Content\"";
-				DEVELOPMENT_TEAM = AKUATGSFRT;
+				DEVELOPMENT_TEAM = 33ZDA25479;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrollApps/Info.plist;
@@ -634,7 +638,7 @@
 					"$(PROJECT_DIR)/TrollApps",
 				);
 				MARKETING_VERSION = 2.3;
-				PRODUCT_BUNDLE_IDENTIFIER = org.resonance.store;
+				PRODUCT_BUNDLE_IDENTIFIER = com.m1337.store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
